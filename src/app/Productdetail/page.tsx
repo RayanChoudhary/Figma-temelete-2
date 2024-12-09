@@ -12,6 +12,19 @@
 
 //   return (
 //     <div className="lg:flex lg:items-start lg:space-x-16"> {/* Increased the gap */}
+//     {/* Product Image (Left Side) */}
+//     <div className="lg:w-1/2 lg:order-1 mb-8 lg:mb-0">
+//       <div className="relative w-full h-0 pb-[125%]">
+//         <Image
+//           className="rounded-md shadow-md"
+//           layout="fill"
+//           objectFit="cover"
+//           alt="The Dandy Chair"
+//           src="/item5.jpg"
+//         />
+//       </div>
+//     </div>
+
 //     {/* Product Details (Right Side) */}
 //     <div className="lg:w-1/2 lg:order-2">
 //       {/* Top Text: Product Title and Price */}
@@ -89,84 +102,23 @@
 // export default ProductDetails;
 
 
-import type { NextPage } from 'next';
-import Image from 'next/image';
 
-const Productdetail: NextPage = () => {
+import React from 'react'
+import Features from '../Components/Features/Features'
+import EmailSignUp from '../Components/Emailsignup/Emailsignup'
+import Listings from '../Components/Listing/Listing'
+import Productdetail from '../Components/Productdetail/productdetail'
+
+const page = () => {
   return (
-    <div className="relative bg-white w-full max-w-screen-lg mx-auto px-6 py-8">
-      {/* Main Wrapper */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Product Image (Left Side) */}
-        <div className="relative w-full h-80 lg:h-auto">
-          <Image
-            className="rounded-md shadow-md object-cover"
-            layout="fill"
-            objectFit="cover"
-            alt="The Dandy Chair"
-            src="/item5.jpg"
-          />
-        </div>
-
-        {/* Text Content (Right Side) */}
-        <div className="flex flex-col gap-8">
-          {/* Product Info Section */}
-          <div className="flex flex-col gap-3 text-gray-800">
-            <h1 className="text-2xl lg:text-3xl font-bold">The Dandy Chair</h1>
-            <span className="text-xl font-semibold">£250</span>
-          </div>
-
-          {/* Description Section */}
-          <div className="flex flex-col gap-4">
-            <div className="text-lg font-bold text-gray-800">Description</div>
-            <div className="text-sm text-gray-600">
-              <p>
-                A timeless design, with premium materials features as one of our most popular and iconic pieces. The
-                dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery.
-              </p>
-              <ul className="list-disc pl-5 mt-2">
-                <li>Premium material</li>
-                <li>Handmade upholstery</li>
-                <li>Quality timeless classic</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Dimensions Section */}
-          <div className="flex flex-col gap-4">
-            <div className="text-lg font-bold text-gray-800">Dimensions</div>
-            <div className="flex flex-wrap gap-8 text-sm">
-              <div className="flex flex-col gap-2">
-                <span className="text-gray-800">Height</span>
-                <span className="text-gray-600">110cm</span>
-              </div>
-              <div className="flex flex-col gap-2">
-                <span className="text-gray-800">Width</span>
-                <span className="text-gray-600">75cm</span>
-              </div>
-              <div className="flex flex-col gap-2">
-                <span className="text-gray-800">Depth</span>
-                <span className="text-gray-600">50cm</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Amount Section */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div className="flex items-center gap-4">
-              <span className="text-lg font-bold text-gray-800">Amount:</span>
-              <div className="flex items-center justify-between w-32 bg-gray-100 px-4 py-2 rounded">
-                <button className="text-gray-400">-</button>
-                <span className="text-gray-800">1</span>
-                <button className="text-gray-400">+</button>
-              </div>
-            </div>
-            <button className="px-8 py-3 bg-gray-900 text-white rounded text-sm">Add to cart</button>
-          </div>
-        </div>
-      </div>
+    <div>
+      
+      <Productdetail/>
+      <Listings/>
+      <Features/>
+      <EmailSignUp/>
     </div>
-  );
-};
+  )
+}
 
-export default Productdetail;
+export default page

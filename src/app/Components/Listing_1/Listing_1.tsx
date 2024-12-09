@@ -1,15 +1,11 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 
-const Listings: NextPage = () => {
+const Listing_1: NextPage = () => {
   return (
     <div>
     <div className="max-w-full mx-auto px-6 lg:px-20 py-12">
-      {/* Header */}
-      <h2 className="text-3xl font-semibold text-gray-800 text-center mb-8">
-        New Ceramics
-      </h2>
-
+    
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Product 1 */}
@@ -19,7 +15,7 @@ const Listings: NextPage = () => {
               className="object-cover"
               layout="fill"
               alt="The Dandy Chair"
-              src="/secpic.png"
+              src="/item11.jpg"
             />
           </div>
           <div className="p-4">
@@ -37,7 +33,7 @@ const Listings: NextPage = () => {
               className="object-cover"
               layout="fill"
               alt="Rustic Vase Set"
-              src="/item1.jpg"
+              src="/item12.jpg"
             />
           </div>
           <div className="p-4">
@@ -55,7 +51,7 @@ const Listings: NextPage = () => {
               className="object-cover"
               layout="fill"
               alt="The Silky Vase"
-              src="/item3.jpg"
+              src="/item13.jpg"
             />
           </div>
           <div className="p-4">
@@ -73,7 +69,7 @@ const Listings: NextPage = () => {
               className="object-cover"
               layout="fill"
               alt="The Lucy Lamp"
-              src="/item4.jpg"
+              src="/item14.jpg"
             />
           </div>
           <div className="p-4">
@@ -84,16 +80,9 @@ const Listings: NextPage = () => {
           </div>
         </div>
       </div>
-
-      {/* View Collection Button */}
-      <div className="text-center mt-12">
-        <button className="px-6 py-3 bg-gray-800 text-white text-lg rounded-lg hover:bg-gray-700">
-          View Collection
-        </button>
-      </div>
-    </div>
+  </div>
   </div>
   );
 };
 
-export default Listings;
+export default Listing_1;

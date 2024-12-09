@@ -1,89 +1,97 @@
-import type { NextPage } from 'next';
+import type { NextPage } from "next";
 import Image from "next/image";
 
 const ShoppingBasket: NextPage = () => {
   return (
-    <div className="w-full relative bg-white h-[749px] text-left text-[#2a254b] text-sm font-satoshi">
+    <div className="w-full bg-white text-left text-[#2a254b] text-sm font-satoshi px-4 lg:px-12 py-8">
       {/* Shopping Cart Title */}
-      <div className="absolute top-[64px] left-[188px] text-4xl leading-[140%] font-clash-display">
+      <div className="text-2xl lg:text-4xl leading-[140%] font-clash-display mb-8 lg:mb-16">
         Your shopping cart
       </div>
 
-      {/* Product, Quantity, Total headers */}
-      <div className="absolute top-[162px] left-[188px] text-base leading-[140%] font-clash-display">
-        Product
-      </div>
-      <div className="absolute top-[162px] left-[838px] text-base leading-[140%] font-clash-display">
-        Quantity
-      </div>
-      <div className="absolute top-[162px] left-[1212px] text-base leading-[140%] font-clash-display">
-        Total
+      {/* Headers */}
+      <div className=" grid-cols-3 lg:grid-cols-[2fr_1fr_1fr] text-base leading-[140%] font-clash-display mb-4 hidden lg:grid">
+        <div>Product</div>
+        <div className="text-center">Quantity</div>
+        <div className="text-right">Total</div>
       </div>
 
-      {/* Product prices */}
-      <div className="absolute top-[225px] left-[1212px] text-lg leading-[150%]">
-        £85
-      </div>
-      <div className="absolute top-[380px] left-[1209px] text-lg leading-[150%]">
-        £125
-      </div>
-
-      {/* Product One */}
-      <div className="absolute top-[214px] left-[188px] flex gap-5 items-center font-semibold text-lg">
-        <Image className="w-[109px] h-[134px] object-cover" width={109} height={134} alt="Product 1" src="/item3.jpg" />
-        <div className="flex flex-col gap-2">
-          <div className="text-xl">Graystone vase</div>
-          <div className="text-sm">
-            <p>A timeless ceramic vase with</p>
-            <p>a tri color grey glaze.</p>
+      {/* Product List */}
+      <div className="space-y-8">
+        {/* Product One */}
+        <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8">
+          <Image
+            className="rounded-md object-cover"
+            width={109}
+            height={134}
+            alt="Graystone Vase"
+            src="/item3.jpg"
+          />
+          <div className="flex-1">
+            <div className="text-lg lg:text-xl font-semibold">Graystone Vase</div>
+            <div className="text-sm text-gray-600">
+              <p>A timeless ceramic vase with</p>
+              <p>a tri color grey glaze.</p>
+            </div>
+            <div className="text-lg lg:text-base mt-2 font-bold">£85</div>
           </div>
-          <div className="text-base">£85</div>
+          <div className="flex justify-between items-center lg:w-40">
+            <div className="bg-[#f9f9f9] flex items-center justify-between p-3 w-24 rounded-md text-base">
+              <div className="text-gray-400 cursor-pointer">-</div>
+              <div className="text-[#2a254b]">1</div>
+              <div className="text-gray-400 cursor-pointer">+</div>
+            </div>
+            <div className="text-lg lg:text-right">£85</div>
+          </div>
+        </div>
+
+        {/* Product Two */}
+        <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8">
+          <Image
+            className="rounded-md object-cover"
+            width={109}
+            height={134}
+            alt="Basic White Vase"
+            src="/item7.jpg"
+          />
+          <div className="flex-1">
+            <div className="text-lg lg:text-xl font-semibold">Basic White Vase</div>
+            <div className="text-sm text-gray-600">
+              <p>Beautiful and simple this is</p>
+              <p>one for the classics</p>
+            </div>
+            <div className="text-lg lg:text-base mt-2 font-bold">£125</div>
+          </div>
+          <div className="flex justify-between items-center lg:w-40">
+            <div className="bg-[#f9f9f9] flex items-center justify-between p-3 w-24 rounded-md text-base">
+              <div className="text-gray-400 cursor-pointer">-</div>
+              <div className="text-[#2a254b]">1</div>
+              <div className="text-gray-400 cursor-pointer">+</div>
+            </div>
+            <div className="text-lg lg:text-right">£125</div>
+          </div>
         </div>
       </div>
 
-      {/* Product Two */}
-      <div className="absolute top-[368px] left-[188px] flex gap-5 items-center font-semibold text-lg">
-        <Image className="w-[109px] h-[134px] object-cover" width={109} height={134} alt="Product 2" src="/item7.jpg" />
-        <div className="flex flex-col gap-2">
-          <div className="text-xl">Basic white vase</div>
-          <div className="text-sm">
-            <p>Beautiful and simple this is</p>
-            <p>one for the classics</p>
-          </div>
-          <div className="text-base">£85</div>
-        </div>
-      </div>
-
-      {/* Dividers */}
-      <div className="absolute top-[193.5px] left-[187.5px] border-t border-[#ebe8f4] w-[1065px]" />
-      <div className="absolute top-[533.5px] left-[187.5px] border-t border-[#ebe8f4] w-[1065px]" />
+      {/* Divider */}
+      <div className="border-t border-[#ebe8f4] my-8" />
 
       {/* Pricing Information */}
-      <div className="absolute top-[562px] left-[970px] flex flex-col gap-3 items-end text-right font-clash-display text-xl text-[#4e4d93]">
-        <div className="flex gap-4 items-center">
-          <div className="leading-[140%]">Subtotal</div>
-          <div className="text-2xl leading-[140%]">£210</div>
+      <div className="flex flex-col items-end space-y-4">
+        <div className="flex justify-between w-full lg:w-auto">
+          <div className="text-xl font-clash-display">Subtotal</div>
+          <div className="text-2xl font-clash-display text-[#4e4d93]">£210</div>
         </div>
-        <div className="text-sm leading-[150%] font-satoshi">
+        <div className="text-sm text-gray-600">
           Taxes and shipping are calculated at checkout
         </div>
       </div>
 
-      {/* Stepper */}
-      <div className="absolute top-[226px] left-[838px] bg-[#f9f9f9] w-[122px] flex items-center justify-between p-[12px_16px] box-border text-[#ebe8f4] text-base">
-        <div>-</div>
-        <div className="text-[#2a254b]">1</div>
-        <div>+</div>
-      </div>
-      <div className="absolute top-[380px] left-[838px] bg-[#f9f9f9] w-[122px] flex items-center justify-between p-[12px_16px] box-border text-[#ebe8f4] text-base">
-        <div>-</div>
-        <div className="text-[#2a254b]">1</div>
-        <div>+</div>
-      </div>
-
       {/* Checkout Button */}
-      <div className="absolute top-[645px] left-[1080px] bg-[#2a254b] flex items-start justify-start p-[16px_32px] text-white text-base">
-        Go to checkout
+      <div className="mt-8 text-center lg:text-right">
+        <button className="px-6 py-3 bg-[#2a254b] text-white text-lg rounded-md hover:bg-[#1d1a3a]">
+          Go to checkout
+        </button>
       </div>
     </div>
   );

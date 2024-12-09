@@ -4,9 +4,9 @@ import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-20 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-12">
         {/* Footer Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center lg:text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left">
           {/* Menu Section */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Menu</h3>
@@ -63,14 +63,14 @@ const Footer = () => {
         <div className="border-t border-gray-700 my-8"></div>
 
         {/* Footer Bottom Section */}
-        <div className="flex flex-col lg:flex-row items-center justify-between text-center lg:text-left">
+        <div className="flex flex-col lg:flex-row items-center justify-between text-center lg:text-left space-y-4 lg:space-y-0">
           {/* Copyright */}
           <p className="text-sm">
             © 2024 Avion LTD. All rights reserved.
           </p>
 
           {/* Social Links */}
-          <div className="flex space-x-4 mt-4 lg:mt-0">
+          <div className="flex space-x-4">
             <a href="#" aria-label="Facebook" className="hover:text-blue-500">
               <FaFacebook />
             </a>

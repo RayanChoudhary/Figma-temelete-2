@@ -1,37 +1,55 @@
-import type { NextPage } from 'next';
-import Image from "next/image";
+import type { NextPage } from "next";
+import { TbTruckDelivery } from "react-icons/tb";
+import { IoCheckmarkCircleOutline } from "react-icons/io5";
+import { GoCreditCard } from "react-icons/go";
+import { LuSprout } from "react-icons/lu";
 
 const Features: NextPage = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center max-w-7xl mx-auto px-6 py-12">
-      {/* Left Content */}
-      <div className="lg:w-1/2 mb-8 lg:mb-0">
-        <div className="mb-6">
-          <div className="text-lg font-semibold text-gray-800">
-            <p className="text-xl text-gray-600">From a studio in London to a global brand with</p>
-            <p className="text-xl text-gray-600">over 400 outlets</p>
-          </div>
-        </div>
-        <div className="mb-6">
-          <p className="text-lg text-gray-700">
-            {`When we started Avion, the idea was simple. Make high quality furniture affordable and available for the mass market.`}
-          </p>
-          <p className="mt-4 text-lg text-gray-700">
-            Handmade, and lovingly crafted furniture and homeware is what we live, breathe and design so our Chelsea boutique became the hotbed for the London interior design community.
-          </p>
-        </div>
-
-        {/* Button */}
-        <div>
-          <button className="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition duration-300">
-            Get in touch
-          </button>
-        </div>
+    <div className="w-full bg-white py-12 px-6 lg:py-20 lg:px-16">
+      {/* Section Title */}
+      <div className="text-center text-2xl lg:text-3xl font-semibold text-[#2a254b] mb-12">
+        What makes our brand different
       </div>
 
-      {/* Right Image */}
-      <div className="lg:w-1/2">
-        <Image className="rounded-lg shadow-lg" width={720} height={603} alt="Avion furniture" src="/item6.jpg" />
+      {/* Features Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Feature 1 */}
+        <div className="flex flex-col items-center text-center gap-4">
+        <TbTruckDelivery />
+    
+          <div className="text-lg font-medium text-[#2a254b]">Next day as standard</div>
+          <p className="text-sm text-gray-600">
+            Order before 3pm and get your order the next day as standard.
+          </p>
+        </div>
+
+        {/* Feature 2 */}
+        <div className="flex flex-col items-center text-center gap-4">
+        <IoCheckmarkCircleOutline />
+          <div className="text-lg font-medium text-[#2a254b]">Recycled packaging</div>
+          <p className="text-sm text-gray-600">
+            We use 100% recycled packaging to ensure our footprint is manageable.
+          </p>
+        </div>
+
+        {/* Feature 3 */}
+        <div className="flex flex-col items-center text-center gap-4">
+        <GoCreditCard />
+          <div className="text-lg font-medium text-[#2a254b]">Unbeatable prices</div>
+          <p className="text-sm text-gray-600">
+            For our materials and quality, you won’t find better prices anywhere.
+          </p>
+        </div>
+
+        {/* Feature 4 */}
+        <div className="flex flex-col items-center text-center gap-4">
+        <LuSprout />
+          <div className="text-lg font-medium text-[#2a254b]">Made by true artisans</div>
+          <p className="text-sm text-gray-600">
+            Handmade crafted goods made with real passion and craftsmanship.
+          </p>
+        </div>
       </div>
     </div>
   );

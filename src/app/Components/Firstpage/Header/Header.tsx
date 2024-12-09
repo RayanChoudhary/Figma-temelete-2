@@ -11,30 +11,31 @@ const Header = () => {
 
   return (
     <>
-      <header className="max-w-[1440px] h-[132px] flex flex-col items-center bg-white px-10 lg:w-full mx-auto">
-        <div className="border-b-[0.5px] border-[#0000004f] h-1/2 w-full mx-auto flex justify-between items-center">
-          {/* Left: Search icon on large screens */}
+      <header className="max-w-[1440px] h-[132px] flex flex-col items-center bg-white px-4 sm:px-6 lg:px-10 mx-auto">
+        {/* Top Section */}
+        <div className="border-b-[0.5px] border-gray-300 h-1/2 w-full flex justify-between items-center">
+          {/* Left: Search Icon */}
           <div className="flex items-center gap-3 lg:flex-1">
-            <div className="lg:block hidden">
-            <IoSearch />
+            <div className="hidden lg:block">
+              <IoSearch className="text-2xl text-gray-700 cursor-pointer hover:text-gray-500" />
             </div>
           </div>
 
           {/* Avion Title */}
-          <h1 className="text-[#22202E] text-2xl font-semibold text-left lg:text-center">
+          <h1 className="text-gray-900 text-2xl font-semibold text-left lg:text-center">
             Avion
           </h1>
 
-          {/* Right: Cart and Profile icons for large screens */}
-          <div className="hidden lg:flex gap-3 text-xl lg:flex-1 justify-end">
-            <MdOutlineShoppingCart />
-            <CgProfile />
+          {/* Right: Cart and Profile Icons */}
+          <div className="hidden lg:flex gap-4 text-2xl lg:flex-1 justify-end">
+            <MdOutlineShoppingCart className="cursor-pointer hover:text-gray-500" />
+            <CgProfile className="cursor-pointer hover:text-gray-500" />
           </div>
 
           {/* Mobile Menu Trigger */}
           <div
             onClick={() => setIsOpen(!isOpen)}
-            className="cursor-pointer lg:hidden flex flex-col gap-1 font-light"
+            className="cursor-pointer lg:hidden flex flex-col gap-1"
           >
             <span className="block w-6 h-1 bg-black"></span>
             <span className="block w-6 h-1 bg-black"></span>
@@ -44,62 +45,58 @@ const Header = () => {
 
         {/* Mobile Navigation Menu */}
         {isOpen && (
-          <div className="absolute top-[132px] left-0 w-full bg-white z-50 shadow-lg">
-            <nav className="flex flex-col gap-4 p-6 text-lg text-[#726E8D]">
-    
-              <Link href="/" className="hover:text-[#5a526c]">
+          <div className="absolute top-[132px] left-0 w-full bg-white z-50 shadow-lg lg:hidden">
+            <nav className="flex flex-col gap-4 p-6 text-lg text-gray-700">
+              <Link href="/" className="hover:text-gray-500">
                 Home
               </Link>
-              <Link href="/Features" className="hover:text-[#5a526c]">
-              Features
+              <Link href="/About" className="hover:text-gray-500">
+                About
               </Link>
-              <Link href="/Listing" className="hover:text-[#5a526c]">
-              Listing
+              <Link href="/Productlisting" className="hover:text-gray-500">
+                Productlisting
               </Link>
-              <Link href="/Productdetail" className="hover:text-[#5a526c]">
-              Productdetail
+              <Link href="/Productdetail" className="hover:text-gray-500">
+                Product Detail
               </Link>
-              <Link href="/Shopingbaskit" className="hover:text-[#5a526c]">
-              Shopingbaskit
+              <Link href="/Shopingbaskit" className="hover:text-gray-500">
+                Shopping Baskit
               </Link>
             </nav>
           </div>
         )}
 
-        {/* Desktop Navigation links */}
-        <nav className="hidden lg:flex w-[675px] justify-between items-center h-1/2 text-[#726E8D]">
-          
-          
+        {/* Desktop Navigation Links */}
+        <nav className="hidden lg:flex w-[675px] justify-between items-center h-1/2 text-gray-700">
           <Link
             href="/"
-            className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1"
+            className="hover:text-gray-500 border-b-2 border-transparent hover:border-gray-500 pb-1"
           >
             Home
           </Link>
-          
           <Link
-            href="/Features"
-            className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1"
+            href="/About"
+            className="hover:text-gray-500 border-b-2 border-transparent hover:border-gray-500 pb-1"
           >
-            Features
+            About
           </Link>
           <Link
-            href="/Listing"
-            className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1"
+            href="/Productlisting"
+            className="hover:text-gray-500 border-b-2 border-transparent hover:border-gray-500 pb-1"
           >
-            Listing
+            Productlisting
           </Link>
           <Link
             href="/Productdetail"
-            className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1"
+            className="hover:text-gray-500 border-b-2 border-transparent hover:border-gray-500 pb-1"
           >
-            Productdetail
+            Product Detail
           </Link>
           <Link
             href="/Shopingbaskit"
-            className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1"
+            className="hover:text-gray-500 border-b-2 border-transparent hover:border-gray-500 pb-1"
           >
-            Shopingbaskit
+            Shopping Baskit
           </Link>
         </nav>
       </header>
